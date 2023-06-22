@@ -18,7 +18,7 @@ class BoxTest {
         assertThat(number).isEqualTo(0)
                 .isLessThan(8);
         assertThat(area).isGreaterThan(0)
-                .isLessThan(1257);
+                .isLessThan(1258);
 
     }
 

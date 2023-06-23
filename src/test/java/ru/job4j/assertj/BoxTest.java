@@ -15,7 +15,6 @@ class BoxTest {
                 .isNotNull();
 
     }
-
     @Test
     void isThisTetrahedron() {
         Box box = new Box(4, 10);

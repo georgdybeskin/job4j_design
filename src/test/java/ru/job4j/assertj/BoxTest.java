@@ -60,7 +60,7 @@ class BoxTest {
         Box box = new Box(0, 1);
         double area = box.getArea();
         assertThat(area).isGreaterThan(6)
-                .isEqualTo(4*Math.PI)
+                .isEqualTo(4 * Math.PI)
                 .isPositive()
                 .isNotNull();
     }

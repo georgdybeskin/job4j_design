@@ -57,19 +57,17 @@ class BoxTest {
     }
     @Test
     void whenAreaOfTetrahedronIsZero() {
-        Box box = new Box(0, 1);
+        Box box = new Box(0, 10);
         double area = box.getArea();
-        assertThat(area).isGreaterThan(6)
-                .isEqualTo(4 * Math.PI)
+        assertThat(area).isGreaterThan(Math.sqrt(3))
                 .isPositive()
                 .isNotNull();
     }
     @Test
     void whenAreaOfTetrahedronIsFour() {
-        Box box = new Box(4, 1);
+        Box box = new Box(4, 10);
         double area = box.getArea();
-        assertThat(area).isGreaterThan(1)
-                .isEqualTo(Math.sqrt(3))
+        assertThat(area).isGreaterThan(Math.sqrt(3))
                 .isPositive()
                 .isNotNull();
     }

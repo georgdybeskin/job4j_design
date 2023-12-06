@@ -9,14 +9,14 @@ public class BackwardArrayIt implements Iterator<Integer> {
 
     public BackwardArrayIt(int[] data) {
         this.data = data;
-        this.point = data.length-1;
+        this.point = data.length - 1;
 
         /* реализуйте конструктор */
     }
 
     @Override
     public boolean hasNext() {
-        return point>=0;
+        return point >= 0;
     }
 
     @Override

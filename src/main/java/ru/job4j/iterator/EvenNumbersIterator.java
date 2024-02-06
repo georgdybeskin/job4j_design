@@ -14,24 +14,24 @@ public class EvenNumbersIterator implements Iterator<Integer> {
 
     @Override
     public boolean hasNext() {
-        return this.ifExist() == 0;
+        return this.ifExist() >= 0;
     }
 
     @Override
     public Integer next() {
         if (this.hasNext()) {
-            return this.data[this.index++];
+            this.index = EvenNumbersIterator.this.ifExist();
+            return EvenNumbersIterator.this.data[this.index++];
         } else {
             throw new NoSuchElementException();
         }
     }
 
-    public Integer ifExist() {
+    private Integer ifExist() {
         int value = -1;
         for (int index = this.index; index < this.data.length; index++) {
             if (this.data[index] % 2 == 0) {
-                this.index = index;
-                value++;
+                value = index;
                 break;
             }
         }

@@ -19,14 +19,12 @@ public class EvenNumbersIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
-        if (this.hasNext()) {
-            this.index = EvenNumbersIterator.this.ifExist();
-            return EvenNumbersIterator.this.data[this.index++];
-        } else {
+        if (!this.hasNext()) {
             throw new NoSuchElementException();
         }
+        this.index = EvenNumbersIterator.this.ifExist();
+        return EvenNumbersIterator.this.data[this.index++];
     }
-
     private Integer ifExist() {
         int value = -1;
         for (int index = this.index; index < this.data.length; index++) {
